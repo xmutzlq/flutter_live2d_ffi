@@ -1,7 +1,5 @@
 package com.glitch9.flutter_live2d_ffi;
 
-import androidx.annotation.NonNull;
-
 // Flutter 插件核心
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
