@@ -2,7 +2,33 @@ package com.glitch9.flutter_live2d_ffi;
 
 import androidx.annotation.NonNull;
 
-import io.flutter.embedding.engine.plugins.FlutterPlugin; 
+// Flutter 插件核心
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
+import io.flutter.plugin.common.MethodChannel.Result;
+
+// PlatformView 相关
+import io.flutter.plugin.platform.PlatformViewRegistry;
+
+// Android 基础
+import android.content.res.AssetManager;
+import android.content.Context;
+
+// 文件操作
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+// 日志
+import android.util.Log;
+
+// 注解
+import androidx.annotation.NonNull;
+import android.os.Environment;
 
 /** FlutterLive2DFFIPlugin */
 public class FlutterLive2DFFIPlugin implements FlutterPlugin, MethodCallHandler {
